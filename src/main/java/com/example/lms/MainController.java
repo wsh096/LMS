@@ -9,13 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @Controller
-public class MainPage {
+public class MainController {
     @RequestMapping("/")
-    public void index(HttpServletRequest request,
-                        HttpServletResponse response) throws IOException {
-        PrintWriter printWriter = response.getWriter();
-        printWriter.write("Index Page");
-        printWriter.close();
+    public String index(){
+        return "index";
     }
     @RequestMapping("/hello")
     public void hello(HttpServletRequest request,
@@ -37,4 +34,5 @@ public class MainPage {
         printWriter.write(msg);
         printWriter.close();
     }
+
 }
