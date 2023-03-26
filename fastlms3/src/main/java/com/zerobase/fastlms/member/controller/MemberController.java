@@ -1,14 +1,13 @@
 package com.zerobase.fastlms.member.controller;
 
 
-import com.zerobase.fastlms.admin.dto.MemberDto;
+import com.zerobase.fastlms.components.admin.dto.MemberDto;
 import com.zerobase.fastlms.course.dto.TakeCourseDto;
 import com.zerobase.fastlms.course.model.ServiceResult;
 import com.zerobase.fastlms.course.service.TakeCourseService;
 import com.zerobase.fastlms.member.model.MemberInput;
 import com.zerobase.fastlms.member.model.ResetPasswordInput;
 import com.zerobase.fastlms.member.service.MemberService;
-import com.zerobase.fastlms.util.PasswordUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +20,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RequiredArgsConstructor
+@RequestMapping("/member")
 @Controller
 public class MemberController {
 
@@ -28,19 +28,19 @@ public class MemberController {
     private final MemberService memberService;
     private final TakeCourseService takeCourseService;
     
-    @RequestMapping("/member/login")
+    @RequestMapping("/login")
     public String login() {
         
         return "member/login";
     }
     
-    @GetMapping("/member/find-password")
+    @GetMapping("/find-password")
     public String findPassword() {
         
         return "member/find_password";
     }
     
-    @PostMapping("/member/find-password")
+    @PostMapping("/find-password")
     public String findPasswordSubmit(Model model, ResetPasswordInput parameter) {
         
         boolean result = memberService.sendResetPassword(parameter);
@@ -49,13 +49,13 @@ public class MemberController {
         return "member/find_password_result";
     }
     
-    @GetMapping("/member/register")
+    @GetMapping("/register")
     public String register() {
         
         return "member/register";
     }
     
-    @PostMapping("/member/register")
+    @PostMapping("/register")
     public String registerSubmit(Model model, HttpServletRequest request
             , MemberInput parameter) {
         
@@ -72,11 +72,11 @@ public class MemberController {
     // https://www.naver.com/cafe/detail.do?id=2222
     
     
-    @GetMapping("/member/email-auth")
+    @GetMapping("/email-auth")
     public String emailAuth(Model model, HttpServletRequest request) {
         
         String uuid = request.getParameter("id");
-        System.out.println(uuid);
+        //System.out.println(uuid);
         
         boolean result = memberService.emailAuth(uuid);
         model.addAttribute("result", result);
@@ -84,7 +84,7 @@ public class MemberController {
         return "member/email_auth";
     }
     
-    @GetMapping("/member/info")//Model 클라이언트한테 데이터를 내리기 위해 사용하는 인페
+    @GetMapping("/info")//Model 클라이언트한테 데이터를 내리기 위해 사용하는 인페
     public String memberInfo(Model model, Principal principal) {
         
         String userId = principal.getName();
@@ -95,7 +95,7 @@ public class MemberController {
         return "member/info";
     }
     
-    @PostMapping("/member/info")
+    @PostMapping("/info")
     public String memberInfoSubmit(Model model
             , MemberInput parameter
             , Principal principal) {
@@ -111,7 +111,7 @@ public class MemberController {
         return "redirect:/member/info";
     }
     
-    @GetMapping("/member/password")
+    @GetMapping("/password")
     public String memberPassword(Model model, Principal principal) {
         
         String userId = principal.getName();
@@ -122,7 +122,7 @@ public class MemberController {
         return "member/password";
     }
     
-    @PostMapping("/member/password")
+    @PostMapping("/password")
     public String memberPasswordSubmit(Model model
             , MemberInput parameter
             , Principal principal) {
@@ -140,7 +140,7 @@ public class MemberController {
     }
     
     
-    @GetMapping("/member/takecourse")
+    @GetMapping("/takecourse")
     public String memberTakeCourse(Model model, Principal principal) {
         
         String userId = principal.getName();
@@ -152,13 +152,13 @@ public class MemberController {
     }
     
     
-    @GetMapping("/member/withdraw")
+    @GetMapping("/withdraw")
     public String memberWithdraw(Model model) {
         
         return "member/withdraw";
     }
     
-    @PostMapping("/member/withdraw")
+    @PostMapping("/withdraw")
     public String memberWithdrawSubmit(Model model
             , MemberInput parameter
             , Principal principal) {

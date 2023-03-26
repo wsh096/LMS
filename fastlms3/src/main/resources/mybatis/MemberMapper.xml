@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zerobase.fastlms.admin.mapper.MemberMapper">
+<mapper namespace="com.zerobase.fastlms.components.admin.mapper.MemberMapper">
 
     <sql id="selectListWhere">
         <if test="searchType != null and searchValue != null">
@@ -38,7 +38,7 @@
             <include refid="selectListWhere"/>
     </select>
 
-    <select id="selectList" resultType="com.zerobase.fastlms.admin.dto.MemberDto">
+    <select id="selectList" resultType="com.zerobase.fastlms.components.admin.dto.MemberDto">
         select *
         from memberEntity
         where 1 = 1

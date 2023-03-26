@@ -1,6 +1,6 @@
-package com.zerobase.fastlms.admin.dto;
+package com.zerobase.fastlms.components.admin.dto;
 
-import com.zerobase.fastlms.admin.entity.Category;
+import com.zerobase.fastlms.components.admin.entity.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

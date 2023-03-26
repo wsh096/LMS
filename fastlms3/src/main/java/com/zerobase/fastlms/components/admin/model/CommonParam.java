@@ -1,4 +1,4 @@
-package com.zerobase.fastlms.admin.model;
+package com.zerobase.fastlms.components.admin.model;
 
 import lombok.Data;
 

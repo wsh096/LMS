@@ -12,11 +12,11 @@
 
 <div>
     <hr/>
-    <a href="/memberEntity/info">회원 정보 수정</a>
+    <a href="/member/info">회원 정보 수정</a>
     |
-    <a href="/memberEntity/password">비밀번호 변경</a>
+    <a href="/member/password">비밀번호 변경</a>
     |
-    <a href="/memberEntity/takecourse">내 수강 목록</a>
+    <a href="/member/takecourse">내 수강 목록</a>
     <hr/>
 </div>
 
@@ -30,7 +30,10 @@
 
     <form id="submitForm" method="post">
         <div>
-            <input type="password" name="password" placeholder="현재 비밀번호 입력" required/>
+            <input type="password"
+                   name="password"
+                   placeholder="현재 비밀번호 입력"
+                   required/>
         </div>
         <div>
             <button type="submit">회원 탈퇴 하기</button>

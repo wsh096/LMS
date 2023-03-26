@@ -1,25 +1,17 @@
 package com.zerobase.fastlms.member.controller;
 
 
-import com.zerobase.fastlms.admin.dto.MemberDto;
 import com.zerobase.fastlms.common.model.ResponseResult;
 import com.zerobase.fastlms.course.dto.TakeCourseDto;
 import com.zerobase.fastlms.course.model.ServiceResult;
 import com.zerobase.fastlms.course.model.TakeCourseInput;
 import com.zerobase.fastlms.course.service.TakeCourseService;
-import com.zerobase.fastlms.member.model.MemberInput;
-import com.zerobase.fastlms.member.model.ResetPasswordInput;
-import com.zerobase.fastlms.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
-import java.util.List;
 
 @RequiredArgsConstructor
 @RestController

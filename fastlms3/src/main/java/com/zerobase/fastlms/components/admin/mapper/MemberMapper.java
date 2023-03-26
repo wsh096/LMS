@@ -1,8 +1,8 @@
-package com.zerobase.fastlms.admin.mapper;
+package com.zerobase.fastlms.components.admin.mapper;
 
 
-import com.zerobase.fastlms.admin.dto.MemberDto;
-import com.zerobase.fastlms.admin.model.MemberParam;
+import com.zerobase.fastlms.components.admin.dto.MemberDto;
+import com.zerobase.fastlms.components.admin.model.MemberParam;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

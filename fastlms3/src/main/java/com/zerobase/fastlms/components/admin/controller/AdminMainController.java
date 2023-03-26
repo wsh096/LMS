@@ -1,4 +1,4 @@
-package com.zerobase.fastlms.admin.controller;
+package com.zerobase.fastlms.components.admin.controller;
 
 
 import org.springframework.stereotype.Controller;

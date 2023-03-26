@@ -5,8 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @Builder
 @Data
 @Entity
+@Table(name="member")
 public class MemberEntity implements MemberCode {
     
     @Id
@@ -24,7 +27,7 @@ public class MemberEntity implements MemberCode {
     private LocalDateTime regDt;
     private LocalDateTime udtDt;//회원정보 수정일
     
-    private boolean emailAuthYn;
+    private boolean emailAuthYn;//이메일인증여부확인
     private LocalDateTime emailAuthDt;
     private String emailAuthKey;
     

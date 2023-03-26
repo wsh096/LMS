@@ -1,4 +1,4 @@
-package com.zerobase.fastlms.admin.dto;
+package com.zerobase.fastlms.components.admin.dto;
 
 import com.zerobase.fastlms.member.entity.MemberEntity;
 import lombok.AllArgsConstructor;

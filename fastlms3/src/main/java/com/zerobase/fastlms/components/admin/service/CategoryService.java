@@ -1,9 +1,7 @@
-package com.zerobase.fastlms.admin.service;
+package com.zerobase.fastlms.components.admin.service;
 
-import com.zerobase.fastlms.admin.dto.CategoryDto;
-import com.zerobase.fastlms.admin.entity.Category;
-import com.zerobase.fastlms.admin.model.CategoryInput;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.zerobase.fastlms.components.admin.dto.CategoryDto;
+import com.zerobase.fastlms.components.admin.model.CategoryInput;
 
 import java.util.List;
 

@@ -1,14 +1,13 @@
 package com.zerobase.fastlms.course.controller;
 
 
-import com.zerobase.fastlms.admin.service.CategoryService;
+import com.zerobase.fastlms.components.admin.service.CategoryService;
 import com.zerobase.fastlms.course.dto.CourseDto;
 import com.zerobase.fastlms.course.model.CourseInput;
 import com.zerobase.fastlms.course.model.CourseParam;
 import com.zerobase.fastlms.course.service.CourseService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;

@@ -18,9 +18,9 @@ public class MailComponents {
     public void sendMailTest() {
     
         SimpleMailMessage msg = new SimpleMailMessage();
-        msg.setTo("satcop@naver.com");
+        msg.setTo("wsh096@gmail.com");
         msg.setSubject("안녕하세요. 제로베이스 입니다.");
-        msg.setText(" 안녕하세요. 제로베이스 입니다. 방갑습니다. ");
+        msg.setText(" 안녕하세요. 제로베이스 입니다. 반갑습니다. ");
         
         javaMailSender.send(msg);
     }
@@ -32,7 +32,10 @@ public class MailComponents {
         MimeMessagePreparator msg = new MimeMessagePreparator() {
             @Override
             public void prepare(MimeMessage mimeMessage) throws Exception {
-                MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
+                MimeMessageHelper mimeMessageHelper =
+                        new MimeMessageHelper(mimeMessage,
+                                true,
+                                "UTF-8");
                 mimeMessageHelper.setTo(mail);
                 mimeMessageHelper.setSubject(subject);
                 mimeMessageHelper.setText(text, true);
@@ -46,9 +49,6 @@ public class MailComponents {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
         return result;
     }
-    
-
 }
