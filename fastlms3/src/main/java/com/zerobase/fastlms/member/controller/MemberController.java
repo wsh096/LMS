@@ -23,7 +23,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class MemberController {
-    
+
+    //생성자를 통한 형태가 현재의 표준
     private final MemberService memberService;
     private final TakeCourseService takeCourseService;
     
@@ -83,7 +84,7 @@ public class MemberController {
         return "member/email_auth";
     }
     
-    @GetMapping("/member/info")
+    @GetMapping("/member/info")//Model 클라이언트한테 데이터를 내리기 위해 사용하는 인페
     public String memberInfo(Model model, Principal principal) {
         
         String userId = principal.getName();

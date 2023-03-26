@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>회원 가입 완료</title>
 </head>
 <body>
 
-    <div th:if="${result}">
+    <div th:if="${result}"> <!-- th로 할 수 있는데 view의 문법 thymeleaf문법!-->
         <h1>회원 가입 완료</h1>
         <div th:replace="/fragments/layout.html :: fragment-body-menu"></div>
 

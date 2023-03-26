@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Builder
 @Data
 @Entity
-public class Member implements MemberCode {
+public class MemberEntity implements MemberCode {
     
     @Id
     private String userId;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>회원 로그인</title>
@@ -12,7 +12,7 @@
     <div th:text="${errorMessage}">
     </div>
 
-    <form method="post" action="/member/login">
+    <form method="post" action="/memberEntity/login">
 
         <div>
             <input type="text" name="username" placeholder="아이디(이메일)을 입력" required/>
@@ -28,7 +28,7 @@
 
     <hr/>
     <div>
-        <a href="/member/find-password"> 비밀번호 찾기</a>
+        <a href="/memberEntity/find-password"> 비밀번호 찾기</a>
     </div>
 
 

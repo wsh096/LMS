@@ -1,6 +1,6 @@
 package com.zerobase.fastlms.admin.dto;
 
-import com.zerobase.fastlms.member.entity.Member;
+import com.zerobase.fastlms.member.entity.MemberEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,26 +41,26 @@ public class MemberDto {
     long seq;
     
     
-    public static MemberDto of(Member member) {
+    public static MemberDto of(MemberEntity memberEntity) {
         
         return MemberDto.builder()
-                .userId(member.getUserId())
-                .userName(member.getUserName())
-                .phone(member.getPhone())
+                .userId(memberEntity.getUserId())
+                .userName(memberEntity.getUserName())
+                .phone(memberEntity.getPhone())
                 //.password(member.getPassword())
-                .regDt(member.getRegDt())
-                .udtDt(member.getUdtDt())
-                .emailAuthYn(member.isEmailAuthYn())
-                .emailAuthDt(member.getEmailAuthDt())
-                .emailAuthKey(member.getEmailAuthKey())
-                .resetPasswordKey(member.getResetPasswordKey())
-                .resetPasswordLimitDt(member.getResetPasswordLimitDt())
-                .adminYn(member.isAdminYn())
-                .userStatus(member.getUserStatus())
+                .regDt(memberEntity.getRegDt())
+                .udtDt(memberEntity.getUdtDt())
+                .emailAuthYn(memberEntity.isEmailAuthYn())
+                .emailAuthDt(memberEntity.getEmailAuthDt())
+                .emailAuthKey(memberEntity.getEmailAuthKey())
+                .resetPasswordKey(memberEntity.getResetPasswordKey())
+                .resetPasswordLimitDt(memberEntity.getResetPasswordLimitDt())
+                .adminYn(memberEntity.isAdminYn())
+                .userStatus(memberEntity.getUserStatus())
                 
-                .zipcode(member.getZipcode())
-                .addr(member.getAddr())
-                .addrDetail(member.getAddrDetail())
+                .zipcode(memberEntity.getZipcode())
+                .addr(memberEntity.getAddr())
+                .addrDetail(memberEntity.getAddrDetail())
                 
                 .build();
     }
